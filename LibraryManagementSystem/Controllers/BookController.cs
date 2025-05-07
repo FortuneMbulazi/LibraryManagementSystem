@@ -15,25 +15,25 @@ namespace LibraryManagementSystemApi.Controllers
             _book = book;
         }
 
-        [HttpGet]
+        [HttpGet("GetAllAsync")]
         public async Task<List<Book>> GetAllAsync()
         {
             return await _book.GetAllAsync();
         }
 
-        [HttpGet]
+        [HttpGet("GetByIdAsync")]
         public async Task<Book> GetByIdAsync(long id)
         {
             return await _book.GetByIdAsync(id);
         }
 
-        [HttpPost]
+        [HttpPost("CreateAsync")]
         public async Task<bool> CreateAsync(Book book)
         {
             return await _book.CreateAsync(book);
         }
 
-        [HttpPut]
+        [HttpPut("UpdateAsync")]
         public async Task<bool> UpdateAsync(Book book)
         {
             return await _book.UpdateAsync(book);
