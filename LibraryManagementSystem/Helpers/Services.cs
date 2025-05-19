@@ -8,6 +8,7 @@ namespace LibraryManagementSystemApi.Helpers
         public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddTransient<IBook, BookRepository>();
+            services.AddScoped<IDBService, DapperDbService>();
         }
     }
 }
